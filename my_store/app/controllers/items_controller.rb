@@ -17,6 +17,7 @@ end
 
 #/items/new GET
 def new
+	@item = Item.new
 end
 
 
@@ -24,13 +25,14 @@ end
 def edit
 end
 
-
 #/items POST
 def create
-     
-    render text: "item create!"
-    #@item = Item.create(name: params[:name], description: params[:description], price: params[:price], real: params[:real], weight: params[:weight])
- 
+   @item = Item.create(items_params)
+   if @item.errors.empty?
+    redirect_to	item_path(@item)
+else
+	render "new"
+    end 
 end
 
 
@@ -41,6 +43,11 @@ end
 
 #/items/1 DELETE
 def destroy	
+end
+
+private
+def items_params
+   params.require(:item).permit(:name, :price, :description, :real, :weight)
 end
 
 end
