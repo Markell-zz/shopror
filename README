@@ -1,7 +1,14 @@
 
-This online store written in Ruby on Rails.
--------------------------------------------------- -----------
-Especially for Bulat Rifkatovich
--------------------------------------------------- -----------
-Version 0.1.2 beta
--------------------------
+<h1>MyStore</h1>
+
+    Author : Markell
+    Version : 0.2.3
+    Website : railsprojects.ho.es
+    Wiki : github.com/Markell/webMCR/wiki
+
+License
+
+GNU General Public License v3
+Information
+
+CMS with scripts for realize "online-mode" in Minecraft
