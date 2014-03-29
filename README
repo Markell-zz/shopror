@@ -1,34 +1,16 @@
-<html>
-<h1>
-<a name="webmcr" class="anchor" href="#webmcr"><span class="octicon octicon-link"></span></a>webMCR</h1>
 
-<ul>
-<li>
-<strong>Author</strong> : NC22</li>
-<li>
-<strong>Version</strong> : 2.4</li>
-<li>
-<strong>Website</strong> : <a href="http://webmcr.com">webMCR.com</a>
-</li>
-<li>
-<strong>Wiki</strong> : <a href="https://github.com/NC22/webMCR/wiki">github.com/NC22/webMCR/wiki</a>
-</li>
-</ul><h2>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+MyStore
+___________________________________________________
 
-<p><a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License v3</a> </p>
+    Author : Markell
+    Version : 0.2.3
+    Website : railsprojects.hol.es
+______________________________
+License
 
-<h2>
-<a name="information" class="anchor" href="#information"><span class="octicon octicon-link"></span></a>Information</h2>
+GNU General Public License v3
+_____________________________
+Information
 
-<p>CMS with scripts for realize "online-mode" in Minecraft</p>
-
-<h3>
-<a name="base-functionality" class="anchor" href="#base-functionality"><span class="octicon octicon-link"></span></a>Base functionality</h3>
-
-<ul>
-<li>Admin panel with RCON console</li>
-<li>Server monitoring system (RCON, Query, Simple Query)</li>
-<li>Skin / Cloak uploader (default skin for male / female character)</li>
-</ul>
-</html>
+Online store powered by Ruby on Rails
+_______________________________________________________
