@@ -14,4 +14,5 @@
 	<td><%= i.id %></td>
 	<td><%= link_to i.name, item_path(i) %></td>
 	<td><%= i.price %> $ </td>
+	<td><%= link_to "Delete", i, method: :delete, data: { confirm: "Really Delete?" } %></td>
 <% end %>
