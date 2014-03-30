@@ -29,7 +29,7 @@ end
 def create
    @item = Item.create(items_params)
    if @item.errors.empty?
-    redirect_to	item_path(@item)
+    redirect_to item_path(@item)
 else
 	render "new"
     end 
