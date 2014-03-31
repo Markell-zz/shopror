@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
 
+before_filter :find_item,      only: [:show, :edit, :update, :destroy]
+before_filter :check_if_admin, only: [:edit, :update, :new, :create, :destroy]
 
 def index
  @items = Item.all 
@@ -8,8 +10,7 @@ end
 
 # /items/1 GET
 def show
-	unless @item = Item.where(id: params[:id]).first
-  
+	unless @item
   	render "items/404", status: 404
   end
 end
@@ -23,7 +24,6 @@ end
 
 #/items/1/edit GET
 def edit
-  @item = Item.find(params[:id])
 end
 
 #/items POST
@@ -39,7 +39,6 @@ end
 
 #/items/1 PUT
 def update	
- @item = Item.find(params[:id])
  @item.update_attributes(items_params)
    if @item.errors.empty?
     redirect_to item_path(@item)
@@ -59,6 +58,16 @@ end
 private
 def items_params
    params.require(:item).permit(:name, :price, :description, :real, :weight)
+end
+
+private
+
+ def find_item
+  @item = Item.find(params[:id])
+end
+
+def check_if_admin
+  render text: "Access denied", status: 403 unless params[:admin]
 end
 
 end
